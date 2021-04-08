@@ -2,7 +2,6 @@
 const User = require("../models/User");
 const mongoose = require("mongoose");
 
-
 //Connecting to the mongoose database before testing 
 beforeAll(async () => {
     await mongoose.connect('mongodb://localhost:27017/WeddingPlanner',{
@@ -25,17 +24,17 @@ describe("User Schema Test", () => {
     // Adding User Testing 
         it('Adding New User', () => {
            const user = {
-               "firstname" : "Amanda",
-               "lastname" : "Shrestha",
-               "email" : "a_raaz@gmail.com",
+               "firstname" : "Sadikshya",
+               "lastname" : "Pandey",
+               "email" : "Sadikshya@gmail.com",
                "location" : "kathmandu",
-               "phonenumber" : "9808438993",
+               "phonenumber" : "9877383938",
                "password"  : "password"
            };
 
            return User.create(user)
             .then((userdata) => {
-                expect(userdata.firstname).toEqual("Amanda")
+                expect(userdata.firstname).toEqual("Sadikshya")
             })
 
         })
@@ -52,9 +51,9 @@ describe("User Schema Test", () => {
     // it('Testing the user find', async() => {
         
 
-    //     return User.findOne({firstname : "Amanda"})
+    //     return User.findOne({firstname : "Sadikshya"})
     //     .then((userdata)=>{
-    //         expect(userdata.firstname).toEqual('Amanda')
+    //         expect(userdata.firstname).toEqual('Sadikshya')
     //     })
 
     // });
