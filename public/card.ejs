@@ -1,0 +1,66 @@
+ <html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    
+    <style> 
+body{
+    background-image: url('http://localhost:3200/public/images/weddingcard.jpg');
+   
+    color: #fff !important;
+}
+.text-center{
+    text-align: center;
+
+}
+.container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.font-itallic {
+    font-style: italic;
+}
+
+.mt-14{
+    margin-top: 140px;
+}
+@font-face {
+    font-family: 'Lucida Handwriting';
+    src: url('http://localhost:3200/public/Lucida Handwriting Italic.ttf');
+}
+@font-face {
+    font-family: 'YouthTouch';
+    src: url('http://localhost:3200/public/YouthTouch.ttf');
+}
+.invi-title{
+    font-family: 'Lucida Handwriting';
+}
+.wedding-card-body p, .wedding-card-body h4{
+    font-family: 'YouthTouch' ;
+
+}
+ 
+</style>
+</head>
+<body>
+    <div class = "container mt-14">
+        <h1 class = "text-center font-italic invi-title">Invitation</h1><hr>
+        <div class = "wedding-card-body">
+            <h3 class = "text-center"><%= weddingdata.groomName %>  &  <%= weddingdata.brideName %> </h3>
+
+            <p class = "text-justify">We invite you to attend the  happy marriage ceremony between
+                <%= weddingdata.groomName %>  &  <%= weddingdata.brideName %> to celebrate
+                 and congratulate them on a happly new life.</p>
+                
+                 <h4>Wedding Date :  <%= weddingdata.weddingDate %></h4> 
+                 <h4>Wedding Venue :  <%if (weddingdata.weddingVenue != null) { %>
+                    <%= weddingdata.weddingVenue.venueName%>
+                    <% } %>
+                   </h4> 
+                 
+        </div>
+    </div>
+</body>
+ </html>
+
