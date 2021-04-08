@@ -23,8 +23,8 @@ afterAll(async () => {
 
 describe("User API Test", () => {
     it('should load user data', () => {
-        return users.testFunction({firstname : "Amanda"}, (data) => { 
-          expect(data.data.firstname).toEqual('Amanda')
+        return users.testFunction({firstname : "Sadikshya"}, (data) => { 
+          expect(data.data.firstname).toEqual('Sadikshya')
         })
       })
 
